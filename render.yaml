@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: employee-management-system
+    env: docker
+    plan: free
+    region: oregon
+    buildCommand: ""
+    startCommand: ""
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_KEY
+        generateValue: true
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: FILESYSTEM_DISK
+        value: public
+databases:
+  - name: render_db
